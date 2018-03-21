@@ -3,16 +3,56 @@
 <head>
 	<meta charset="utf-8">
 	<title>FECHA GIT</title>
+	<script type="text/javascript" src="js/js.js"></script>
 </head>
 <body>
 
 	<H1>TRABAJO DE FECHA GIT</H1>
 
-	<input type="number" name="Dia" placeholder="Dia">
-	<input type="number" name="Mes" placeholder="Mes">
-	<input type="number" name="Año" placeholder="Año"> <BR/> <BR/>
-	<input type="Button" name="validar_fecha" value="VALIDAR FECHA">
-	<input type="Button" name="validar_bisiesto" value="VALIDAR BISIESTO">
+	<input type="number" name="Dia" placeholder="Dia" id = "dia">
+	<input type="number" name="Mes" placeholder="Mes" id = "mes">
+	<input type="number" name="Anio" placeholder="Año" id = "anio"> <BR/> <BR/>
+	<input type="Button" name="validar_fecha" value="VALIDAR FECHA" onclick="adquirir_fecha();">
+	<input type="Button" name="validar_bisiesto" value="VALIDAR BISIESTO" onclick = "bisiesto();">
+	<div id= "mostrar"></div>
+
+	<script type="text/javascript">
+
+		var anio
+		var mes
+		var dia
+		function adquirir_fecha() {
+
+		dia =  document.getElementById('dia').value;
+		mes =  document.getElementById('mes').value;
+		anio = document.getElementById('anio').value;
+
+		document.write(dia + mes + anio)
+
+		}
+
+		function bisiesto (){
+
+
+		if ((anio % 4 == 0) && (anio % 100 != 0) || (anio % 400 == 0)){
+
+		   alert('bisiesto');
+
+		}else {
+
+			alert (' no es bisiesto');
+		}
+
+
+		}
+
+		function sumar_7_dias (){
+
+		}
+
+
+
+	</script>
 
 
 
